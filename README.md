@@ -24,9 +24,24 @@ El código se organiza de manera modular para facilitar su mantenimiento:
 * `Tienda_online/`: Paquete principal.
     * `models/`: Contiene las clases `Usuario`, `Producto` y `Pedido`.
     * `Services/`: Contiene `TiendaService`, encargado de la lógica de negocio.
+* `Dockerfile`: Archivo de configuración para la creación de la imagen del contenedor.
+* `requirements.txt`: Lista de dependencias del proyecto.
 
-## Ejecución
-Para iniciar la aplicación, ejecuta el siguiente comando desde la raíz del proyecto:
+## Ejecución Local
+Para iniciar la aplicación directamente con Python, ejecuta el siguiente comando desde la raíz del proyecto:
 
 ```bash
 python main.py
+
+## Dockerización
+
+### Construcción de la imagen
+Para crear la imagen del contenedor, ejecuta:
+
+```bash
+docker build -t practica-devops:v1 .
+
+Para iniciar la aplicación dentro de Docker:
+
+```bash
+docker run -it --rm practica-devops:v1
